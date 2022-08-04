@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title> Rock Paper Scissors </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="UPDATEDSCRIPT.js"></script>
+        
+    </head>
+    
+    <body>
+        <!--Title and Gameplay area-->
+        <div class="gameplay">
+            <div class="welcomeMessage">
+            WHICH DO YOU CHOOSE
+            </div>
+
+            <div class="buttons">
+        <button class="rock" onclick="rockButton()">ROCK</button>
+        <button class="paper" onclick="paperButton()">PAPER</button>
+        <button class="scissors" onclick="scissorsButton()">SCISSORS</button>
+            </div>
+        </div>
+        <!--status bar- Scores, Round, Etc..-->
+        <div class="gameInfo">
+            <button id="reset" onclick="reset()">RESET Scores to 0</button>
+                 <div class="scoreZone">
+                    <h1>Player</h1>
+                    <h1 id=myScore >0</h1>
+                    <h1 id=herScore >0</h1>
+                    <h1>Evylen</h1>
+            </div>
+        </div>
+    
+       
+    
+    
+    </body>
+</html>

@@ -1,0 +1,76 @@
+
+
+html{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: space-around;
+}
+
+/* Title and Gameplay Area */
+.gameplay{
+    border: 2px solid green;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column;
+}
+.welcomeMessage{
+    
+    color: blue;
+    font-size: 72px;
+    padding: 48px;
+    margin: 12px;
+    border: 2px solid red;
+}
+
+.buttons {
+    border: 2px solid red;
+    display: flex;
+    flex-flow: row;
+   
+    justify-content: center;
+    align-content: stretch;
+}
+
+/*Buttons*/
+.rock, .paper, .scissors{
+    margin:12px;
+    padding: 24px;
+    font-size: 36px;
+    background-color: rgb(70, 43, 226);
+    color: aliceblue;
+    border-radius: 36px;
+    border: 2px solid aliceblue;
+}
+
+#myscore{
+    margin: 36px;
+    border: 10px solid white;
+}
+
+.gameInfo{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin: 12px;
+    color: red;
+}
+
+
+
+#herScore, #myScore{
+    font-size: 56px;
+}
+.scoreZone{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
