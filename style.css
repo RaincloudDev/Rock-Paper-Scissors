@@ -74,3 +74,20 @@ html{
     flex-flow: row;
     justify-content: space-between;
 }
+
+.liveFeed{
+    width: 80%;
+    display: flex;
+    flex-flow: row;
+    color: blueviolet;
+    font-size: 28px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.playerChoice, .evylenChoice{
+    display: flex;
+    
+   
+
+}
