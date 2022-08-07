@@ -14,31 +14,49 @@
         <!--Title and Gameplay area-->
         <div class="gameplay">
             <div class="welcomeMessage">
-            WHICH DO YOU CHOOSE
+                <p class="titleSong">You're fighting an AI named Evylen in
+                    the woods and there are only three things you
+                    each can use to fight each other! Your smooth
+                    ape brain should understand the rules of engament... see 
+                    if you can win!(YOU CAN'T!)
+                </p>
+            <h1>WHICH DO YOU CHOOSE</h1>
             </div>
 
             <div class="buttons">
-                <img src="#">
+                
         <button class="rock" onclick="rockButton()">ROCK</button>
         <button class="paper" onclick="paperButton()">PAPER</button>
         <button class="scissors" onclick="scissorsButton()">SCISSORS</button>
-                <img src="#">
+                
                 </div>
         </div>
         <!--status bar- Scores, Round, Etc..-->
         <div class="gameInfo">
-            <button id="reset" onclick="reset()">RESET Scores to 0</button>
+            
                  <div class="scoreZone">
-                    <h1>Player</h1>
+                    <h1 class="nerd">Player</h1>
+                    <p id="playerChoice"> </p>
                     <h1 id=myScore >0</h1>
                     <h1 id=herScore >0</h1>
-                    <h1>Evylen</h1>
+                    <p id="evylenChoice"> </p>
+                    <h1 class="nerd">Evylen</h1>
                 </div>
+                <button id="reset" onclick="reset()">RESET Scores to 0</button>
+
+                <!--
                 <div class="liveFeed">
-                    <p id="playerChoice">rock </p>
-                    <p id="evylenChoice"> rock</p>
+                    <div class="playerSide">
+                        <h1>Player</h1>
+                        <p id="playerChoice"> </p>
+                    </div>
+                    <div class="evylenSide">
+                        <h1>Evylen</h1> 
+                    <p id="evylenChoice"> </p>
+                    </div>
         
                 </div>
+            -->
         </div>
 
         

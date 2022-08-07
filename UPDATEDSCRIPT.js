@@ -13,8 +13,9 @@ function rockButton(){
     playerChoice = 0;
     evylenMove();
     printChoices();
-    //animateChoices();
     fight(playerChoice, evylenChoose);
+    animateChoices();
+    
     
     
 }
@@ -25,18 +26,19 @@ function paperButton(){
     playerChoice = 1;
     evylenMove();
     printChoices();
-    //animateChoices();
     fight(playerChoice, evylenChoose);
+    animateChoices();
 }
-
+//fight before animation so scores are tallied the right way.
+//this is based on the current working state of this document.
 function scissorsButton(){
     console.log("You chose scissors");
     
     playerChoice = 2;
     evylenMove();
     printChoices();
-    //animateChoices();
     fight(playerChoice, evylenChoose);
+    animateChoices();
 }
 
 //evylen logic
@@ -44,7 +46,8 @@ function evylenMove(){
     const evylenOptions = [0, 1, 2];
     const evylen = Math.floor(Math.random() * evylenOptions.length);
     const evylenChoice = evylenOptions[evylen];
-
+        
+    
     if (evylenChoice === 0){
         console.log('Evylen chose rock!');
         evylenChoose = 0;
@@ -98,6 +101,7 @@ function fight(playerChoice, evylenChoose){
         (playerChoice === 2 && evylenChoose == 2)
      )  {
             console.log('BOWTIE MACCARONI');
+            tie();
             printScores();
             printChoices();
         }
@@ -106,17 +110,22 @@ function fight(playerChoice, evylenChoose){
 
 //UI
 function playerWin(){
+    win();
 var myScore = playerScore;
 var myScoreElement = document.getElementById('myScore');
     playerScore ++;
    myScoreElement.innerHTML = playerScore;
+
    printScores();
 }
 function playerLose(){
+    lose();
     var herScore = evylenScore;
     var herScoreElement = document.getElementById('herScore');
-        evylenScore ++;
+    
+       evylenScore ++;
        herScoreElement.innerHTML = evylenScore;
+       
        printScores();
     }
 function printChoices(){
@@ -140,8 +149,27 @@ function animateChoices(){
     var evylenAnimation = evylenChoose;
     var evylenAnimationElement = document.getElementById('evylenChoice');
     
-    if (playerChoice = 0){
-        choiceEcho = 'rock';
+    if (playerChoice === 0){
+        choiceEcho = 'RocK';
+        
+    }
+    else if (playerChoice === 1){
+        choiceEcho = 'PapeR';
+        
+    }
+    else if (playerChoice === 2){
+        choiceEcho = 'ScissorS';
+        
+    }
+
+    if (evylenChoose === 0) {
+        evylenChoose = 'Rock';
+    }
+    else if (evylenChoose === 1) {
+        evylenChoose = 'PapeR';
+    }
+    else if (evylenChoose === 2) {
+        evylenChoose = 'ScissorS';
     }
      
     humanAnimationElement.innerHTML = choiceEcho;
@@ -149,3 +177,37 @@ function animateChoices(){
     evylenAnimationElement.innerHTML = evylenChoose;
 
 }
+
+
+
+function lose(){
+var herColor = document.getElementById('evylenChoice');
+var color = document.getElementById('playerChoice');  
+
+herColor.style.backgroundColor="green"; 
+color.style.backgroundColor="red";
+herColor.style.color="black";
+color.style.color="black";
+  }
+
+function win(){
+    var herColor = document.getElementById('evylenChoice');
+    var color = document.getElementById('playerChoice');  
+    
+    herColor.style.backgroundColor="red"; 
+    color.style.backgroundColor="green";
+    herColor.style.color="black";
+    color.style.color="black";
+
+      }
+
+function tie(){
+
+      var herColor = document.getElementById('evylenChoice');
+    var color = document.getElementById('playerChoice');  
+    
+    herColor.style.backgroundColor="blue"; 
+    herColor.style.color="white";
+    color.style.color="white";
+    color.style.backgroundColor="blue";
+      }

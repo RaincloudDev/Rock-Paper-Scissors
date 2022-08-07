@@ -1,7 +1,10 @@
 
 
 html{
-    background-color: black;
+    background-image: url(images/very_exciting_morning_Fantasy_picture.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     height: 100%;
     width: 100%;
     display: flex;
@@ -12,45 +15,52 @@ html{
 
 /* Title and Gameplay Area */
 .gameplay{
-    border: 2px solid green;
+    
     align-items: center;
     justify-content: center;
     display: flex;
-    flex: 1 1 auto;
+    
     flex-flow: column;
 }
 .welcomeMessage{
-    
-    color: blue;
-    font-size: 72px;
-    padding: 48px;
+    display: flex;
+    flex-flow: column;
+    color: #3d3c3b;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    padding: 12px;
     margin: 12px;
-    border: 2px solid red;
+    
 }
 
 .buttons {
-    border: 2px solid red;
-    display: flex;
-    flex-flow: row;
    
-    justify-content: center;
-    align-content: stretch;
+   
+}
+#reset{
+    display: flex;
+    margin: 4px;
+    align-self: flex-end;
+    
 }
 
 /*Buttons*/
 .rock, .paper, .scissors{
-    margin:12px;
+    margin:6px;
     padding: 24px;
-    font-size: 36px;
-    background-color: rgb(70, 43, 226);
-    color: aliceblue;
+    
+    font-size: 48px;
+    
+    background-color: #50afc2;
+    color: #3d3c3b;
     border-radius: 36px;
-    border: 2px solid aliceblue;
+    border: 2px solid #fbf6f2;
 }
 
 #myscore{
     margin: 36px;
-    border: 10px solid white;
+    border: 10px solid #fbf6f2;
 }
 
 .gameInfo{
@@ -59,21 +69,68 @@ html{
     align-items: center;
     justify-content: center;
     padding: 12px;
-    margin: 12px;
-    color: red;
+    margin: 3px;
+    color: #50afc2;
 }
 
+h1{
+    color: be8cff;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 8px solid black;
+    border-bottom-left-radius: 32px;
+    border-top-right-radius: 32px;
+    background-color: #fbf6f29c;
+    
+}
 
+.titleSong{
+    display: flex;
+    align-self: center;
+    color: #3f8798;
+    font-weight: 700;
+    max-width: 75% ;
+    padding: 12px;
+    border: 8px solid black;
+    border-bottom-left-radius: 32px;
+    border-top-right-radius: 32px;
+    background-color:#fbf6f29c;
+    font-size: 24px;
+}
 
 #herScore, #myScore{
-    font-size: 56px;
+    outline:2px solid rgb(0, 0, 0);
+    margin: 6px;
+    background-color: #3d3c3b9c;
+    
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    display: flex;
+    flex:  1 auto;
+}
+#myScore{
+    border-bottom-left-radius: 32px;
+}
+#herScore{
+    border-top-right-radius: 32px;
 }
 .scoreZone{
     width: 100%;
+    border: 8px solid black;
+    border-bottom-left-radius: 32px;
+    border-top-right-radius: 32px;
+    background-color: #fbf6f29c;
+
     display: flex;
+    flex: 1 1 auto;
     flex-flow: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
 
 .liveFeed{
     width: 80%;
@@ -84,9 +141,31 @@ html{
     align-items: center;
     justify-content: space-between;
 }
+.nerd{
+    border: 4px solid black;
+    margin: 4px;
+    border-bottom-left-radius: 32px;
+    border-top-right-radius: 32px;
+    font-size: 32 px;
+    background-color: #3d3c3b9c;
+}
 
-.playerChoice, .evylenChoice{
-    display: flex;
+#playerChoice, #evylenChoice{
+    
+    border:2px dotted rgb(0, 0, 0);
+    color:rgb(0, 0, 0);
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    border-bottom-right-radius: 32px;
+    border-top-left-radius: 32px;
+    display:flex;
+    flex:1 1 auto;
+    min-height: 35px;
+    min-width: 150px;
+    max-width: 150px;
+    align-items: center;
+    justify-content: center;
     
    
 
