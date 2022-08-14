@@ -1,6 +1,6 @@
 var playerScore = 0;
 var evylenScore = 0;
-var roundNumber = 1;
+var aroundNumber = 1;
 var evylenChoose = '';
 var playerChoice = '';
 var choiceEcho = '';
@@ -85,6 +85,7 @@ function fight(playerChoice, evylenChoose){
             console.log('KING OF THE CASTLE');
             playerWin();
             printChoices();
+            gameOver();
         }
     else if(
         (playerChoice === 2 && evylenChoose == 0) ||
@@ -94,6 +95,7 @@ function fight(playerChoice, evylenChoose){
             console.log('LOSER OF THE GAME');
             playerLose();
             printChoices();
+            gameOver();
         }
     else if(
         (playerChoice === 0 && evylenChoose == 0) ||
@@ -104,6 +106,7 @@ function fight(playerChoice, evylenChoose){
             tie();
             printScores();
             printChoices();
+            gameOver();
         }
         
 }
@@ -115,7 +118,7 @@ var myScore = playerScore;
 var myScoreElement = document.getElementById('myScore');
     playerScore ++;
    myScoreElement.innerHTML = playerScore;
-
+    
    printScores();
 }
 function playerLose(){
@@ -130,6 +133,7 @@ function playerLose(){
     }
 function printChoices(){
     console.log((playerChoice) + "<>" + (evylenChoose));
+    
 }
 
 function reset(){
@@ -137,9 +141,11 @@ function reset(){
     var myScoreElement = document.getElementById('myScore');
     playerScore = 0;
     evylenScore = 0;
+    aroundNumber = 1;
     herScoreElement.innerHTML = evylenScore
     myScoreElement.innerHTML = playerScore;
     printScores();
+
 }
 
 function animateChoices(){
@@ -181,25 +187,26 @@ function animateChoices(){
 
 
 function lose(){
-var herColor = document.getElementById('evylenChoice');
-var color = document.getElementById('playerChoice');  
+    var herColor = document.getElementById('evylenChoice');
+    var color = document.getElementById('playerChoice');  
 
-herColor.style.backgroundColor="green"; 
-color.style.backgroundColor="red";
-herColor.style.color="black";
-color.style.color="black";
-  }
+    herColor.style.backgroundColor="green"; 
+    color.style.backgroundColor="red";
+    herColor.style.color="black";
+    color.style.color="black";
+    
+}
 
 function win(){
     var herColor = document.getElementById('evylenChoice');
     var color = document.getElementById('playerChoice');  
-    
+        
     herColor.style.backgroundColor="red"; 
     color.style.backgroundColor="green";
     herColor.style.color="black";
     color.style.color="black";
-
-      }
+    
+}
 
 function tie(){
 
@@ -210,4 +217,28 @@ function tie(){
     herColor.style.color="white";
     color.style.color="white";
     color.style.backgroundColor="blue";
-      }
+    
+}
+
+function nextRound(){
+    var adisplay = document.getElementById('aroundNumber');
+    aroundNumber++;
+    adisplay.innerHTML = "ROUND" + " " + aroundNumber;
+    
+}
+
+function gameOver(){
+    if (aroundNumber >= 10){
+        reset();
+        if (playerScore > evylenScore){
+            
+            alert("YOU WON");
+        }
+        else {
+            alert("you didnt win...");
+        }
+    }
+    else{
+        nextRound();
+    }
+}

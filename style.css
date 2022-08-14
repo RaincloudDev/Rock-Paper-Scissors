@@ -46,7 +46,7 @@ html{
 }
 
 /*Buttons*/
-.rock, .paper, .scissors{
+.rock, .paper, .scissors {
     margin:6px;
     padding: 24px;
     
@@ -101,7 +101,7 @@ h1{
     font-size: 24px;
 }
 
-#herScore, #myScore{
+#herScore, #myScore , #aroundNumber{
     outline:2px solid rgb(0, 0, 0);
     margin: 6px;
     background-color: #3d3c3b9c;
@@ -118,7 +118,7 @@ h1{
 #herScore{
     border-top-right-radius: 32px;
 }
-.scoreZone{
+.scoreZone {
     width: 100%;
     border: 8px solid black;
     border-bottom-left-radius: 32px;
@@ -141,13 +141,18 @@ h1{
     align-items: center;
     justify-content: space-between;
 }
-.nerd{
+.nerd , #aroundNumber{
     border: 4px solid black;
     margin: 4px;
     border-bottom-left-radius: 32px;
     border-top-right-radius: 32px;
     font-size: 32 px;
     background-color: #3d3c3b9c;
+}
+#aroundNumber{
+    color:#acd1d8;
+    padding: 6px;
+    font-weight:bold;
 }
 
 #playerChoice, #evylenChoice{
@@ -166,7 +171,4 @@ h1{
     max-width: 150px;
     align-items: center;
     justify-content: center;
-    
-   
-
 }
